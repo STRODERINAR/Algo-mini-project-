@@ -8,8 +8,8 @@ body{
     display: flex;
     
 }
-#body{
-    color:white;
+.container{
+    color:pink;
     display: flex;
     justify-content: center;
     gap: 10px;
