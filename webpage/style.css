@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+.Head{
+    color:yellow;
+    text-shadow: .5px 1px 2px white;
+    justify-content: center;
+    display: flex;
+    
+}
+#body{
+    color:white;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
