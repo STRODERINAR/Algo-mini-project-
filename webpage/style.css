@@ -9,8 +9,10 @@ body{
 }
 h1{
     font-size: 40px;
-    border: 2px solid white;
+    border: 2px solid black;
     width: fit-content;
+    border-radius: 10px 10px;
+    background-color: purple;
 }
 .container{
     color:black;
