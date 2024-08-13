@@ -1,5 +1,7 @@
 body{
     background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 .Head{
     color:yellow;
@@ -10,38 +12,48 @@ body{
 h1{
     font-size: 40px;
     border: 2px solid black;
-    width: fit-content;
-    border-radius: 10px 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
     background-color: purple;
+    color: white;
+    margin: 0;
 }
+.container div{
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    transition: width 0.3s ease; transform: 0.6s ease-in-out;
+    flex:1 1 22%;
+
+    
+}
+
 .container{
-    color:black;
     display: flex;
-    justify-content: center;
-    font-size: 30px;
-    gap:10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
 }
 
 #box1{
-    text-align: center;
     background-color:aquamarine;
-    border-radius: 2px 2px;
 }
 #box2{
-    text-align: center;
-    border-radius: 2px 2px;
     background-color: aqua;
 }
 #box3{
-    text-align: center;
-    border-radius: 2px 2px;
     background-color: blanchedalmond;
 }
 #box4{
-    text-align: center;
-    border-radius: 2px 2px;
     background-color: blueviolet;
 }
+
+.container div:hover{
+    width: 15%;
+    transform: scale(1.05);
+}
+
 ::-webkit-scrollbar{
     width: 10px;
 }
+
