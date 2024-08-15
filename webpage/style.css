@@ -63,14 +63,16 @@ body {
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out, background-color  0.4s ease;
+    height: 300px;
 }
 
 .box img {
+    height: 200px;
     width: 100%;
-    height: auto;
     display: block;
     border-bottom: 1px solid #444;
+    object-fit: cover;
 }
 
 .box p {
