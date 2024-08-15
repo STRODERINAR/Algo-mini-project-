@@ -1,7 +1,9 @@
 body{
-    background-color: black;
+    background-color: #1c1c1c;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
+    color: #f0f0f0;
 }
 .Head{
     text-shadow: .5px 1px 3px white;
@@ -21,11 +23,11 @@ body{
 .container div{
     text-align: center;
     border-radius: 5px;
-    padding: 20px;
-    transition: width 0.3s ease, transform 0.6s ease-in-out;
+    padding: 9px;
+    transition: transform 0.4s ease-in-out, background-color 0.3s ease;
     flex: 1 1 200px;
     background-color: #282c34;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     width: 200px;
 }
 
@@ -36,16 +38,21 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
 
 }
 .container img{
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0; 
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+#box1{
+    
 }
 
 .container div:hover img {
@@ -55,8 +62,54 @@ body{
     width: 15%;
     transform: scale(1.05);
 }
-
-::-webkit-scrollbar{
-    width: 10px;
+.bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: purple;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index:1;
 }
-
+.bar a{
+    display: inline;
+    padding: 15px 20px; 
+    color: aqua;
+    border-right: 1px solid #bbb;
+    cursor: pointer;
+}
+.bar a:last-child{
+    border-right: none;
+    margin-left: auto;
+}
+.bar a:hover{
+    transform: scale(1.05);
+    background-color: green;
+}
+.serch{
+    display: flex;
+    align-items: center;
+    background-color:lightgray;
+    border-radius: 30px ;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px white;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.serch input[type="text"]{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #666;
+    outline: none;
+    flex: 1;
+}
+::-webkit-scrollbar{
+    background-color: #555;
+    border-radius: 5px;
+}
