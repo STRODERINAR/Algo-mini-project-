@@ -1,0 +1,15 @@
+.home{
+   margin: 0 auto;
+}
+#head{
+   font-family:'Didot', 'Bodoni', serif; 
+   font-size:60px;
+   text-align: center;
+   text-wrap: wrap;
+   margin: 0 auto;
+}
+#text{
+   font-family: 'Helvetica', 'Arial', sans-serif;
+   font-size: 18px;
+   text-align: center
+}
