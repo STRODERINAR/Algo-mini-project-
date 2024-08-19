@@ -1,15 +1,87 @@
+body{
+   background-color: antiquewhite;
+}
 .home{
-   margin: 0 auto;
+   margin: 5% auto;
+   transition: color 0.3s ease;
+}
+.home:hover{
+   color: green;
 }
 #head{
    font-family:'Didot', 'Bodoni', serif; 
    font-size:60px;
    text-align: center;
-   text-wrap: wrap;
    margin: 0 auto;
 }
 #text{
    font-family: 'Helvetica', 'Arial', sans-serif;
    font-size: 18px;
    text-align: center
+}
+.subtext {
+   display: flex;
+   justify-content: center; 
+   gap: 100px; 
+   margin-top:20%;
+}
+.recipes, .invesment {
+   font-family: 'garamond', serif;
+   text-align: center;
+   position: relative;
+}
+.recipes b, .invesment b {
+   transition: color 0.3s ease;
+   font-size: 24px;
+}
+.recipes em, .invesment em {
+   transition: color 0.3s ease;  
+   margin: 0px 25px;
+   font-size: 18px;
+   display: block;
+}
+#line {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100px;
+   background-color: black;
+   height: 3px;
+   opacity: 0;  
+   transform: scaleX(0);  
+   transition: transform 0.7s ease, opacity 0.7s ease;
+   margin-top: 10px;  
+   position: relative;
+}
+#line::before, #line::after{
+   content: ' ';
+   background-color: black;
+   width: 10px;
+   height: 10px;
+   transform: rotate(45deg);
+   flex-shrink: 0;
+}
+#line::after{
+   left: -12px;
+}
+#line::before{
+   right: -12px;
+}
+.recipes:hover,.invesment:hover{
+   cursor: pointer;
+}
+.recipes b:hover, .invesment b:hover {
+   color: aqua;
+}
+.recipes em:hover, .invesment em:hover {
+   color: brown;
+}
+.recipes:hover #line, .invesment:hover #line {
+   opacity: 1;  
+   transform: scaleX(1);  
+   cursor: pointer;
+}
+::-webkit-scrollbar {
+   background-color: #555;
+   border-radius: 5px;
 }
