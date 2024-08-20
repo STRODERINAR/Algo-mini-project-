@@ -1,0 +1,32 @@
+body{
+    background-color: #9CA39C;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8{
+    transition: transform 0.3s ease-in-out;
+    width:auto
+}
+img{
+    display: block;
+    height: 150px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 25px 10px;
+    
+}
+.box1:hover,.box2:hover,.box3:hover,.box4:hover,.box5:hover,.box6:hover,.box7:hover,.box8:hover{
+    transform: scale(1.05);
+    border-radius: 0px;
+}
+img:hover{
+    border-radius:20px 10px;
+}

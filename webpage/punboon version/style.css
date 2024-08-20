@@ -30,9 +30,11 @@ body{
    text-align: center;
    position: relative;
 }
-.recipes b, .invesment b {
+.recipes b, .invesment b, .recipes a, .invesment a{
    transition: color 0.3s ease;
    font-size: 24px;
+   text-decoration: none;
+   color: black;
 }
 .recipes em, .invesment em {
    transition: color 0.3s ease;  
@@ -70,7 +72,7 @@ body{
 .recipes:hover,.invesment:hover{
    cursor: pointer;
 }
-.recipes b:hover, .invesment b:hover {
+.recipes b:hover, .invesment b:hover,.recipes a:hover,.invesment a:hover {
    color: aqua;
 }
 .recipes em:hover, .invesment em:hover {
