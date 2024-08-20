@@ -6,27 +6,39 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
+    height: 450px;
+    width: 70%;
     margin: 20px auto;
+    
 }
 .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8{
     transition: transform 0.3s ease-in-out;
-    width:auto
+    height: 300px;
+    opacity: 0; 
+    animation: fadeIn 1s forwards; 
+    animation: popup 1.5s ease-in-out both;
 }
 img{
-    display: block;
-    height: 150px;
     width: 100%;
-    display: block;
+    height: 100%;
     object-fit: cover;
-    border-radius: 25px 10px;
-    
+    border-radius: 25px 15px;
 }
 .box1:hover,.box2:hover,.box3:hover,.box4:hover,.box5:hover,.box6:hover,.box7:hover,.box8:hover{
     transform: scale(1.05);
     border-radius: 0px;
+    cursor: pointer;
 }
 img:hover{
-    border-radius:20px 10px;
+    border-radius:23px 13px;
+    filter: brightness(70%);
+}
+@keyframes popup {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
 }

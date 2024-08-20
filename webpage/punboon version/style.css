@@ -2,28 +2,32 @@ body{
    background-color: antiquewhite;
 }
 .home{
-   margin: 5% auto;
-   transition: color 0.3s ease;
+   padding: 10% 15%;
 }
-.home:hover{
+#head,#text{
+   transition:color 0.3s ease,transform 0.4s ease-in-out;
+}
+#head:hover,#text:hover{
    color: green;
+   cursor:context-menu;
+   transform: scale(1.05);
 }
 #head{
-   font-family:'Didot', 'Bodoni', serif; 
-   font-size:60px;
+   font-family: 'Didot', 'Bodoni', serif; 
+   font-size: calc(60px + 1.5vw); 
    text-align: center;
    margin: 0 auto;
 }
 #text{
    font-family: 'Helvetica', 'Arial', sans-serif;
-   font-size: 18px;
-   text-align: center
+   font-size: 20px;
+   text-align: center;
 }
 .subtext {
    display: flex;
    justify-content: center; 
    gap: 100px; 
-   margin-top:20%;
+   padding: 20%;
 }
 .recipes, .invesment {
    font-family: 'garamond', serif;
@@ -39,7 +43,7 @@ body{
 .recipes em, .invesment em {
    transition: color 0.3s ease;  
    margin: 0px 25px;
-   font-size: 18px;
+   font-size: 18px; 
    display: block;
 }
 #line {
@@ -50,7 +54,8 @@ body{
    background-color: black;
    height: 3px;
    opacity: 0;  
-   transform: scaleX(0);  
+   transform: scale(0);  
+   transform-origin: center;
    transition: transform 0.7s ease, opacity 0.7s ease;
    margin-top: 10px;  
    position: relative;
@@ -83,7 +88,27 @@ body{
    transform: scaleX(1);  
    cursor: pointer;
 }
-::-webkit-scrollbar {
-   background-color: #555;
+::-webkit-scrollbar-thumb {
+   background-color: #333; 
    border-radius: 5px;
 }
+::-webkit-scrollbar-thumb:hover {
+   background-color: #777;
+}
+
+
+@keyframes drawLine {
+   from {
+       width: 0;
+   }
+   to {
+       width: 100px;
+   }
+}
+
+.recipes:hover #line, .invesment:hover #line {
+   opacity: 1;  
+   transform: scale(1);
+   animation: drawLine 0.8s ease-in-out forwards;
+}
+
